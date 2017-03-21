@@ -54,11 +54,11 @@ A textual element, i.e. "> Show Summary Statistics" or "> Hide Summary Statistic
 
 The PHP file that returns application data is in the src/php folder included with the distribution.  It is possible to place the PHP file on a server and test locally provided a CORS header is returned from the PHP script.  The example included in this repo has such a header and you will need to install the PHP file on a server in order to run the application.  Locate the _AutoModel.ts_ file in the app/model folder and search for the code segment
 
-````
+```
   this._service.getData("http://algorithmist.net/sse/services/autodata.php")
                         .subscribe( data  => this.__onAutoData(data),
                                     error => console.log(<any>error) );
-````
+```
 
 Replace the above URL with the new location.
 
