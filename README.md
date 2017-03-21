@@ -70,13 +70,13 @@ The display after data loading appears as follows:
 (http://algorithmist.net/image/table1.png)
 
 
-Click on '> Show Summary Statistics' to observe the flyout panel, which displays the following:
+Click on the text '> Show Summary Statistics' to observe the flyout panel, which displays the following:
 
 ![Image of 2D Table Flyout Panel]
 (http://algorithmist.net/image/table2.png)
 
 
-Click on '> Hide Summary Statistics' to return the display to its original state.
+Click on the text '> Hide Summary Statistics' to return the display to its original state.
 
 Then, deconstruct the code and have fun!  The application could use a bit of a visual overhaul to make it look nicer, so that might be a nice place to start.
 
