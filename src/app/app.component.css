@@ -1,0 +1,84 @@
+td
+{
+  text-align: center;
+}
+
+.rounded
+{
+  max-width: 600px;
+  max-height: 800px;
+  overflow-y: hidden;
+  padding: 8px;
+  border: 2px solid #dddddd;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.top-margin
+{
+  margin-top: 20px;
+}
+
+.paddedDiv
+{
+  padding: 8px;
+}
+
+.fullWidth
+{
+  width: 100%;
+}
+
+.logo-img
+{
+  float:left;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.bordered
+{
+  border: 1px solid #333333;
+}
+
+.tbl-header
+{
+  font-size: 12px; 
+  font-weight: bold;
+}
+
+.tbl-content
+{
+  padding: 4px;
+}
+
+.tbl-pad-bottom
+{
+	padding-bottom: 15px;
+}
+
+.pad-left
+{
+	margin-left: 6px;
+}
+
+.tbl-base
+{
+  width: 550px;
+  margin-left: 22px;
+}
+
+.tbody
+{
+  font-size: 12px;
+  width: 550px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.overlaid
+{
+  z-index: 10;
+}

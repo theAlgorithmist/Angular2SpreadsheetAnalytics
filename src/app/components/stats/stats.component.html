@@ -1,0 +1,46 @@
+<div [@visibleState]="_visibleState" (@visibleState.start)="__onAnimationBegin()" (@visibleState.done)="__onAnimationEnd()" class="statContainer">
+
+<h1 makeClickable (onClick)="__onShowClicked()" [innerHTML]="summaryString"></h1>
+
+<div *ngIf="_visible">
+  <div class="offset">
+    <div>
+      <span>Price Quartiles </span> [ <span *ngFor="let q of _quartile">{{q | number:'4.1-1'}} &nbsp;</span> ]
+    </div>
+    <div>
+      <span>Price Quintiles </span> [ <span *ngFor="let q1 of _quintile">{{q1 | number:'4.1-1'}} &nbsp;</span> ]
+    </div>
+    <div>
+      <span>Price Stats: mean: {{_priceMean | number:'4.1-2'}} &nbsp; std. dev: {{_priceStd | number:'4.1-2'}} </span>
+    </div>
+    <div>
+      <span class='tbl-h1'>Cross-Table (model sales, simple vs. bold color)</span>
+    </div>
+    <div>
+      <span class='tbl-h1'>Total observations: {{_observations}} &nbsp; Table chi-2: {{_tableChi2 | number:'1.1-3'}}</span>
+    </div>
+
+    <div class="tbl-pad-top">
+      <table class="table table-striped table-bordered">
+        <th>Model</th>
+        <th>Simple Color</th>
+        <th>Bold Color</th>
+        <th>Row Count</th>
+        <tr *ngFor="let key of _tblRows">
+          <td>{{key.model}}</td>
+          <td>{{key.c1n}} <br/> {{key.c1r | number:'1.1-3'}} <br/> {{key.c1t | number:'1.1-3'}}</td>
+          <td>{{key.c2n}} <br/> {{key.c2r | number:'1.1-3'}} <br/> {{key.c2t | number:'1.1-3'}}</td>
+          <td>{{key.count}}</td>
+        </tr>
+        <tr>
+          <td>Column Counts</td>
+          <td>{{_colCount1}}</td>
+          <td>{{_colCount2}}</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>

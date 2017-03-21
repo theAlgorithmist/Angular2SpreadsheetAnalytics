@@ -1,0 +1,48 @@
+<div class="container-fluid rounded">
+  <div class="row fullWidth">
+    <img class="img-responsive logo-img" src="assets/eyes.png">
+    <span>The Algorithmist Car Data 2D Table Analysis</span>
+  </div>
+
+  <div class="row fullWidth">
+    <div class="paddedDiv">
+      <div *ngIf="_loading">
+        <!-- Loading component -->
+        <loading loadingText="Loading Auto Data"></loading>
+      </div>
+      <div>
+      <!-- Title and other stuff does here -->
+      <p>Auto Data</p>
+      </div>
+      <!-- The data table - should be a full-on datagrid in a prodution environment -->
+      <div *ngIf="!_loading" class="tbl-base">
+          <table class="table">
+             <thead class="thead-inverse tbl-header">
+              <tr>
+                <th *ngFor="let h of _headers">{{h}}</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="tbody">
+            <table class="table table-bordered">
+              <tbody>
+                <template ngFor let-auto [ngForOf]="_autoData"> 
+                  <tr>
+                    <template ngFor let-item [ngForOf]="auto">
+                      <td>{{item}}</td>
+                    </template>
+                  </tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row fullWidth overlaid">
+    <div class="paddedDiv">
+     <stat-summary></stat-summary>
+    </div>
+  </div>
+</div>

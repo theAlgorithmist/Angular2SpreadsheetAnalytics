@@ -1,0 +1,31 @@
+table
+{
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+span
+{
+  font-size: 12px;
+  font-weight: bold;
+}
+
+h1
+{
+  font-size: 14px; 
+  font-weight:bold;
+  margin-left: 10px;
+}
+
+.offset
+{
+  margin-left: 40px;
+}
+
+.statContainer
+{
+  background-color: #fff;
+  height: 480px;
+  overflow-y: hidden;
+}
