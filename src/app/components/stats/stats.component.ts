@@ -92,7 +92,7 @@ import { TSMT$Table     } from '../../lib/Table';
    *
    * @return Nothing
    */
-   constructor(private _d: FluxDispatcher, private _chgDetector: ChangeDetectorRef)
+   constructor(private _d: FluxDispatcher)
    {
      super(_d);
 
@@ -146,9 +146,6 @@ import { TSMT$Table     } from '../../lib/Table';
          this._table.fromArray(tableData, types);
 
          this.__computeStats();
-
-         // this works since the data is returned after an http request, which triggers a CD cycle; otherwise, you might have to do the following
-         //this._chgDetector.detectChanges();
    
        break;  
      }
