@@ -66,7 +66,7 @@ import { Subscription } from 'rxjs/Subscription';
    *
    * @return Nothing
    */
-   constructor(private _m: AutoModel, private _d: FluxDispatcher, private _chgDetector: ChangeDetectorRef)
+   constructor(private _m: AutoModel, private _d: FluxDispatcher)
    {
      super(_d);
 
@@ -108,9 +108,6 @@ import { Subscription } from 'rxjs/Subscription';
 
          this._autoData = < Array<Array<number | string>> > data['autodata'];
 
-         // this works since the data is returned after an http request, which triggers a CD cycle; otherwise, you might have to do the following
-         //this._chgDetector.detectChanges();
-   
        break;  
      }
    }
