@@ -66,13 +66,11 @@ You may now build and serve using the CLI.
 
 The display after data loading appears as follows:
 
-![Image of 2D Table Demo]
 (http://algorithmist.net/image/table1.png)
 
 
 Click on the text '> Show Summary Statistics' to observe the flyout panel, which displays the following:
 
-![Image of 2D Table Flyout Panel]
 (http://algorithmist.net/image/table2.png)
 
 
